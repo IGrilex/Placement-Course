@@ -1,0 +1,35 @@
+\begin{table}[H]
+\centering
+\caption{The twenty feature extractors compared in this study, one line each. Rows run baseline, Cls, CNN, Trf. $^\star$ marks a module integrated into pySLAM for this study rather than shipped with it.}
+\label{tab:fe-glance}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}llp{1.9cm}p{6.5cm}@{}}
+\toprule
+\textbf{Method} & \textbf{fam.} & \textbf{type} & \textbf{in one line} \\
+\midrule
+\textbf{ORB2 (baseline)} \cite{murartal2017orbslam2} & Cls & binary & ORB2 as shipped, the reference every other row is measured against \\
+ORB \cite{rublee2011orb} & Cls & binary & the original oriented FAST keypoint with a rotated BRIEF descriptor \\
+BRISK \cite{leutenegger2011brisk} & Cls & binary & scale-space FAST detector, descriptor sampled on concentric rings \\
+AKAZE \cite{alcantarilla2013akaze} & Cls & binary & nonlinear diffusion keeps edges sharp across scales \\
+SIFT \cite{lowe2004sift} & Cls & float & the gradient-histogram reference, matched in Euclidean space \\
+RootSIFT \cite{arandjelovic2012rootsift} & Cls & float & SIFT under a Hellinger metric, a one-line change and usually better \\
+KAZE \cite{alcantarilla2012kaze} & Cls & float & the float-descriptor ancestor of AKAZE, kept for the timing comparison \\
+\addlinespace[2pt]
+SuperPoint \cite{detone2018superpoint} & CNN & joint & the well-rounded reference: one network detects and describes \\
+XFeat \cite{potje2024xfeat} & CNN & joint & built for raw speed on a small backbone \\
+XFeat×XFeat \cite{potje2024xfeat} & CNN & semi-dense & XFeat paired with its own semi-dense matcher instead of nearest neighbour \\
+ALIKED \cite{zhao2023aliked} & CNN & joint & a deformable descriptor head keeps it light without losing accuracy \\
+LiftFeat$^\star$ \cite{liu2025liftfeat} & CNN & joint & 3D-geometry cues added to a lightweight backbone \\
+DISK \cite{tyszkiewicz2020disk} & CNN & dense & policy-gradient training over dense features, heavy to run \\
+R2D2 \cite{revaud2019r2d2} & CNN & dense & predicts repeatability and reliability as separate maps \\
+D2-Net \cite{dusmanu2019d2net} & CNN & dense & detection deferred until after description, on a dense feature map \\
+Key.Net \cite{barrosolaguna2019keynet} & CNN & detector & detector-centric and paired with a separate descriptor, unlike its neighbours \\
+\addlinespace[2pt]
+LightGlue \cite{lindenberger2023lightglue} & Trf & matcher & convolutional features, attention matching over both images jointly \\
+XFeat+LightGlue \cite{lindenberger2023lightglue} & Trf & matcher & the same attention matcher on XFeat's cheaper front end \\
+RDD$^\star$ \cite{chen2025rdd} & Trf & feature & attention pushed into the feature stage via a deformable transformer \\
+DeDoDe$^\star$ \cite{edstedt2024dedode} & Trf & feature & a Vision-Transformer descriptor, detection and description trained apart \\
+\bottomrule
+\end{tabular}
+\end{table}

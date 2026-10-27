@@ -1,0 +1,18 @@
+\begin{table}[H]
+\centering
+\caption{Machine cost of each depth source. The V2 generation saturates the GPU and runs an order of magnitude below the camera rate; the V3 generation does neither. Columns as in Table~\ref{tab:hw-cost-fe}, apart from the family column, dropped here since every row is the same family (transformer).}
+\label{tab:hw-cost-depth}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+\textbf{Configuration} & \textbf{GPU\,\% (rel)} & \textbf{CPU\,\% (rel)} & \textbf{fps (rel)} & \textbf{peak GB} & \textbf{CPU/frame} \\
+\midrule
+\textbf{ORB2 (baseline)} & \textbf{5.3\,(1.00$\times$)} & 36.9\,(1.00$\times$) & \textbf{13.8\,(1.00$\times$)} & 19.6 & \textbf{2.67} \\
+ORB2 + DA V3 & 34.3\,(6.49$\times$) & 28.7\,(0.78$\times$) & 10.7\,(0.79$\times$) & 26.9 & 2.69 \\
+SuperPoint + DA V3 & 42.6\,(8.05$\times$) & 27.3\,(0.74$\times$) & 9.2\,(0.68$\times$) & 13.9 & 2.95 \\
+ORB2 + DA V2 & 98.5\,(19.63$\times$) & \textbf{10.5\,(0.28$\times$)} & 0.9\,(0.06$\times$) & \textbf{11.6} & 12.25 \\
+SuperPoint + DA V2 & 98.6\,(19.63$\times$) & 11.5\,(0.31$\times$) & 0.8\,(0.06$\times$) & 17.4 & 13.49 \\
+\bottomrule
+\end{tabular}
+\end{table}

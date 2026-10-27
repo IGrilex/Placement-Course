@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering
+\caption{Data provenance and repetition balance per condition. \emph{Measured} runs have both a runner log entry and a run directory; \emph{recovered} runs have only the directory, and their metrics are real; \emph{orphaned} runs have only the log entry, carry no metrics, and are excluded from every aggregate. \emph{Probe} cells are single exploratory runs where the norm is three, and are excluded from every aggregate.}
+\label{tab:provenance}
+\begin{tabular}{llrrrrrrrrr}
+\toprule
+ & & \multicolumn{4}{c}{Runs} & \multicolumn{5}{c}{Cells} \\
+\cmidrule(lr){3-6}\cmidrule(lr){7-11}
+Condition & Mode & Total & Meas. & Recov. & Orph. & Total & Full & Under & Over & Probe \\
+\midrule
+i7-8700K · 12t · 14 GB & SLAM & 461 & 410 & 38 & 13 & 162 & 119 & 18 & 2 & 23 \\
+i7-8700K · 12t · 14 GB & VO & 92 & 76 & 12 & 4 & 80 & 80 & 0 & 0 & 0 \\
+R9 9950X · 12t · 14 GB & SLAM & 453 & 405 & 36 & 12 & 139 & 139 & 0 & 0 & 0 \\
+R9 9950X · 12t · 14 GB & VO & 64 & 48 & 12 & 4 & 52 & 52 & 0 & 0 & 0 \\
+R9 9950X · 12t · 28 GB & SLAM & 485 & 405 & 60 & 20 & 139 & 135 & 0 & 4 & 0 \\
+R9 9950X · 12t · 28 GB & VO & 64 & 48 & 12 & 4 & 52 & 52 & 0 & 0 & 0 \\
+R9 9950X · 32t · 28 GB & SLAM & 453 & 405 & 36 & 12 & 139 & 139 & 0 & 0 & 0 \\
+R9 9950X · 32t · 28 GB & VO & 64 & 48 & 12 & 4 & 52 & 52 & 0 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}

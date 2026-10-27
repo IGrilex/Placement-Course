@@ -1,0 +1,25 @@
+\begin{table}[!htbp]
+\centering
+\caption{The stretches of road that end runs. Clusters are the 100-frame windows in which most runs stopped, pooled over both 28\,GB conditions so that none of these is a memory kill. ``Frames'' is the range to extract consecutive images from for Figure~\ref{fig:ds-hard-sections}.}
+\label{tab:ds-hard-clusters}
+\small
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+Seq. & & Frames & At & Runs & Peak yaw & Speed \\
+ & & & (\% route) & ended & (deg/s) & (m/s) \\
+\midrule
+\texttt{test0} & C1 & 622--725 & 72 & 6 & 30 & 7.7 \\
+ & C2 & 518--622 & 61 & 4 & 42 & 10.3 \\
+ & C3 & 829--933 & 95 & 2 & 32 & 8.4 \\
+\texttt{test1} & C1 & 412--515 & 30 & 67 & 29 & 3.1 \\
+ & C2 & 928--1031 & 63 & 15 & 28 & 8.6 \\
+ & C3 & 1031--1134 & 70 & 9 & 28 & 8.3 \\
+\texttt{test2} & C1 & 305--406 & 13 & 21 & 5 & 9.5 \\
+ & C2 & 508--610 & 20 & 15 & 33 & 6.3 \\
+ & C3 & 203--305 & 9 & 6 & 7 & 7.3 \\
+\texttt{test3} & C1 & 903--1004 & 32 & 50 & 36 & 3.3 \\
+ & C2 & 200--301 & 8 & 12 & 44 & 3.7 \\
+ & C3 & 803--903 & 28 & 6 & 33 & 6.2 \\
+\bottomrule
+\end{tabular}
+\end{table}

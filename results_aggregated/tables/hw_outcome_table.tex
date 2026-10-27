@@ -1,0 +1,69 @@
+\begin{table}[H]
+\centering
+\caption{Completed runs over attempts for every configuration at every hardware condition, on the common cells. Read a row left to right to see what that configuration did with more memory and more threads.}
+\label{tab:hw-outcome}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Configuration & fam. & i7/14 & R9/14 & R9/28 & R9/28/32t \\
+\midrule
+\multicolumn{6}{@{}l}{\itshape Baseline} \\
+\textbf{ORB2 (baseline)} & Cls & 8/12 & 8/12 & 18/20 & 12/12 \\
+\midrule
+\multicolumn{6}{@{}l}{\itshape Feature extraction} \\
+SIFT & Cls & 3/6 & 4/6 & 6/6 & 6/6 \\
+RootSIFT & Cls & 3/6 & 3/6 & 6/6 & 6/6 \\
+BRISK & Cls & 6/12 & 3/12 & 12/12 & 12/12 \\
+AKAZE & Cls & 3/13 & 4/12 & 9/12 & 11/12 \\
+ORB & Cls & 5/12 & 6/12 & 7/12 & 6/12 \\
+DISK & CNN & 6/6 & 6/6 & 6/6 & 6/6 \\
+D2-Net & CNN & 0/6 & 2/6 & 6/6 & 6/6 \\
+LiftFeat & CNN & 2/5 & 3/6 & 4/6 & 4/6 \\
+Key.Net & CNN & 3/6 & 3/6 & 4/6 & 3/6 \\
+XFeat & CNN & 2/6 & 0/6 & 6/6 & 5/6 \\
+XFeat×XFeat & CNN & 0/5 & 0/6 & 4/6 & 5/6 \\
+ALIKED & CNN & 3/12 & 3/12 & 4/12 & 3/12 \\
+SuperPoint & CNN & 3/12 & 3/12 & 3/12 & 3/12 \\
+R2D2 & CNN & 0/6 & 0/6 & 0/6 & 0/6 \\
+XFeat+LightGlue & Trf & 3/6 & 3/6 & 6/6 & 5/6 \\
+RDD & Trf & 3/6 & 3/6 & 5/6 & 4/6 \\
+DeDoDe & Trf & 0/6 & 0/6 & 6/6 & 6/6 \\
+LightGlue & Trf & 3/12 & 3/12 & 3/12 & 3/12 \\
+\midrule
+\multicolumn{6}{@{}l}{\itshape Loop closure} \\
+OBIndex2 & Cls & 9/12 & 12/12 & 12/12 & 10/12 \\
+iBoW & Cls & 5/6 & 6/6 & 5/6 & 5/6 \\
+SAD & Cls & 9/12 & 12/12 & 9/12 & 10/12 \\
+DBoW2 & Cls & 6/12 & 9/12 & 12/12 & 12/12 \\
+VLAD & Cls & 9/12 & 10/12 & 11/12 & 8/12 \\
+AlexNet & CNN & 3/3 & 3/3 & 3/3 & 3/3 \\
+CosPlace & CNN & 6/6 & 6/6 & 5/6 & 6/6 \\
+NetVLAD & CNN & 6/6 & 6/6 & 5/6 & 6/6 \\
+EigenPlaces & CNN & 5/6 & 5/6 & 5/6 & 6/6 \\
+CricaVPR & Trf & 10/12 & 10/12 & 10/12 & 10/12 \\
+MegaLoc & Trf & 8/12 & 10/12 & 10/12 & 11/12 \\
+SALAD & Trf & 8/12 & 9/12 & 9/12 & 12/12 \\
+SuperVLAD & Trf & 1/12 & 11/12 & 7/12 & 7/12 \\
+\midrule
+\multicolumn{6}{@{}l}{\itshape Back end} \\
+GTSAM & Cls & 8/12 & 9/12 & 9/12 & 11/12 \\
+\midrule
+\multicolumn{6}{@{}l}{\itshape Combined} \\
+AKAZE + OBIndex2 & Cls & 11/12 & 12/12 & 10/12 & 11/12 \\
+AKAZE + NetVLAD & Cls & 7/12 & 9/12 & 12/12 & 11/12 \\
+AKAZE + SALAD & Cls & 9/12 & 6/12 & 12/12 & 11/12 \\
+AKAZE + MegaLoc & Cls & 9/12 & 9/12 & 10/12 & 9/12 \\
+LightGlue + OBIndex2 & Trf & 2/8 & 4/12 & 3/12 & 4/12 \\
+LightGlue + MegaLoc & Trf & 2/8 & 3/12 & 4/12 & 3/12 \\
+LightGlue + NetVLAD & Trf & 2/8 & 3/12 & 4/12 & 3/12 \\
+LightGlue + SALAD & Trf & 0/8 & 3/12 & 4/12 & 3/12 \\
+\midrule
+\multicolumn{6}{@{}l}{\itshape Depth} \\
+ORB2 + DA V2 & Trf & 1/3 & 3/3 & 3/3 & 3/3 \\
+ORB2 + DA V3 & Trf & 6/12 & 6/12 & 9/12 & 6/12 \\
+SuperPoint + DA V2 & Trf & 0/3 & 2/3 & 2/3 & 2/3 \\
+SuperPoint + DA V3 & Trf & 2/13 & 2/12 & 1/12 & 1/12 \\
+\bottomrule
+\end{tabular}
+\end{table}

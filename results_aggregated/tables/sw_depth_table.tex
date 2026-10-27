@@ -1,0 +1,18 @@
+\begin{table}[H]
+\centering
+\caption{Monocular plus neural depth at the reference condition, against the stereo baseline. ``DA'' is DepthAnything. ``Scale'' is the similarity scale recovered by Umeyama alignment: 1.0 means the reconstruction is metrically correct, and a value below~1 means the map is too small by that factor before the alignment absorbs it.}
+\label{tab:sw-depth}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lccrrrr@{}}
+\toprule
+\textbf{Configuration} & \textbf{compl.} & \textbf{scale} & \texttt{test0} & \texttt{test1} & \texttt{test2} & \texttt{test3} \\
+\midrule
+\textbf{ORB2 (baseline)} & 18/20 & 0.98 & \textbf{1.29 (5/5)} & \textbf{7.70 (5/5)} & \textbf{2.74 (5/5)} & \textbf{3.58 (3/5)$^\dagger$} \\
+ORB2 + DA V2 & 3/3 & 1.01 & 10.17 (3/3) & -- & -- & -- \\
+ORB2 + DA V3 & 9/12 & 0.75 & 8.30 (3/3) & 27.15 (3/3) & lost @8\% & 20.08 (3/3)$^\dagger$ \\
+SuperPoint + DA V2 & 2/3 & 1.03 & 10.31 (2/3) & -- & -- & -- \\
+SuperPoint + DA V3 & 1/12 & 0.74 & 7.30 (1/3) & lost @71\% & lost @4\% & lost @29\% \\
+\bottomrule
+\end{tabular}
+\end{table}

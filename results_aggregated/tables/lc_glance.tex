@@ -1,0 +1,29 @@
+\begin{table}[H]
+\centering
+\caption{The fourteen loop closers, one line each. Columns and row order as in Table~\ref{tab:fe-glance}. The classical rows reuse descriptors the tracker has already computed; every deep row needs its own forward pass per keyframe.}
+\label{tab:lc-glance}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}llp{1.9cm}p{6.5cm}@{}}
+\toprule
+\textbf{Method} & \textbf{fam.} & \textbf{type} & \textbf{in one line} \\
+\midrule
+\textbf{DBoW3 (baseline)} \cite{galvezlopez2012dbow2} & Cls & BoW, offline & DBoW3 as shipped, reusing the tracker's own ORB descriptors \\
+DBoW2 \cite{galvezlopez2012dbow2} & Cls & BoW, offline & the 2012 bag of binary words, vocabulary trained ahead of the run \\
+iBoW \cite{garciafidalgo2018ibow} & Cls & BoW, online & builds its vocabulary incrementally as the drive proceeds \\
+OBIndex2 \cite{garciafidalgo2018ibow} & Cls & BoW, online & the incremental index behind iBoW, used directly \\
+VLAD \cite{jegou2010vlad} & Cls & aggregation & local descriptors pooled into one vector, no vocabulary lookup \\
+SAD & Cls & whole image & down-sampled images compared directly, no descriptor stage at all \\
+\addlinespace[2pt]
+AlexNet \cite{krizhevsky2012alexnet} & CNN & global desc. & the deliberately weak older baseline for the learned descriptors \\
+NetVLAD \cite{arandjelovic2016netvlad} & CNN & global desc. & the classic learned aggregation layer over convolutional features \\
+CosPlace \cite{berton2022cosplace} & CNN & global desc. & trained for place recognition as a classification problem \\
+EigenPlaces \cite{berton2023eigenplaces} & CNN & global desc. & trained on viewpoint-diverse views of the same place \\
+\addlinespace[2pt]
+SALAD$^\star$ \cite{izquierdo2024salad} & Trf & DINOv2 & optimal-transport aggregation over the frozen backbone \\
+CricaVPR$^\star$ \cite{lu2024cricavpr} & Trf & DINOv2 & adds cross-image correlation between candidate keyframes \\
+SuperVLAD$^\star$ \cite{lu2024supervlad} & Trf & DINOv2 & a VLAD-style descriptor compressed to a compact vector \\
+MegaLoc \cite{berton2025megaloc} & Trf & DINOv2 & the recent all-rounder, trained across many place-recognition datasets \\
+\bottomrule
+\end{tabular}
+\end{table}

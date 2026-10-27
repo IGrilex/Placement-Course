@@ -1,0 +1,27 @@
+\begin{table}[H]
+\centering
+\caption{Loop closure at the reference condition, every run sharing the ORB2 front end so only the place-recognition module varies. Rows and columns as in Table~\ref{tab:sw-fe}.}
+\label{tab:sw-lc}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}llcrrrr@{}}
+\toprule
+\textbf{Method} & \textbf{fam.} & \textbf{compl.} & \texttt{test0} & \texttt{test1} & \texttt{test2} & \texttt{test3} \\
+\midrule
+\textbf{ORB2 (baseline)} & Cls & 18/20 & 1.29 (5/5) & 7.70 (5/5) & 2.74 (5/5) & 3.58 (3/5)$^\dagger$ \\
+DBoW2 & Cls & 12/12 & 1.26 (3/3) & 12.13 (3/3) & 2.57 (3/3) & \textbf{2.52 (3/3)$^\dagger$} \\
+OBIndex2 & Cls & 12/12 & 1.28 (3/3) & 17.40 (3/3) & \textbf{2.42 (3/3)} & 2.73 (3/3)$^\dagger$ \\
+VLAD & Cls & 11/12 & 1.37 (3/3) & 21.28 (3/3) & 3.22 (3/3) & 11.03 (2/3)$^\dagger$ \\
+iBoW & Cls & 5/6 & 1.27 (3/3) & 16.29 (2/3) & -- & -- \\
+SAD & Cls & 9/12 & 1.24 (3/3) & 21.95 (3/3) & 2.84 (3/3) & lost @31\% \\
+AlexNet & CNN & 3/3 & 1.26 (3/3) & -- & -- & -- \\
+CosPlace & CNN & 5/6 & 1.29 (3/3) & 25.58 (2/3) & -- & -- \\
+EigenPlaces & CNN & 5/6 & 1.28 (3/3) & 6.32 (2/3) & -- & -- \\
+NetVLAD & CNN & 5/6 & 1.30 (3/3) & 26.43 (2/3) & -- & -- \\
+CricaVPR & Trf & 10/12 & 1.32 (3/3) & \textbf{5.55 (3/3)} & 2.99 (3/3) & 9.07 (1/3)$^\dagger$ \\
+MegaLoc & Trf & 10/12 & 1.35 (3/3) & 17.73 (3/3) & 2.96 (3/3) & 9.39 (1/3)$^\dagger$ \\
+SALAD & Trf & 9/12 & 1.29 (3/3) & 43.94 (1/3) & 2.74 (3/3) & 21.24 (2/3)$^\dagger$ \\
+SuperVLAD & Trf & 7/12 & \textbf{1.24 (3/3)} & lost @60\% & 2.84 (3/3) & 7.00 (1/3)$^\dagger$ \\
+\bottomrule
+\end{tabular}
+\end{table}

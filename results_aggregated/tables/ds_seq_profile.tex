@@ -1,0 +1,23 @@
+\begin{table}[!htbp]
+\centering
+\caption{The four sequences, characterised. Route geometry is computed from the ground-truth poses; a manoeuvre is a contiguous stretch above 20\,deg/s sweeping more than $45^\circ$, and a revisit is a pose pair within 15\,m and at least 20\,s apart. Completion is the share of full-SLAM runs that finished at the reference condition \condMem.}
+\label{tab:seq-profile}
+\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+ & \texttt{test0} & \texttt{test1} & \texttt{test2} & \texttt{test3} \\
+\midrule
+Frames & 933 & 1547 & 2848 & 3012 \\
+Duration (s) & 97.2 & 171.2 & 298.0 & 326.7 \\
+Path length (m) & 771 & 1340 & 2667 & 2478 \\
+Mean speed (m/s) & 7.9 & 7.8 & 8.9 & 7.6 \\
+Manoeuvres $>45^\circ$ & 5 & 7 & 9 & 16 \\
+Peak yaw rate (deg/s) & 42 & 38 & 52 & 52 \\
+Revisited segments & 53 & 199 & 129 & 217 \\
+\ \ of which $>60^\circ$ apart & 37 & 98 & 0 & 2 \\
+\midrule
+Variants attempted & 45 & 42 & 26 & 26 \\
+Completion at \condMem\ (\%) & 95.6 & 60.9 & 67.5 & 47.5 \\
+\bottomrule
+\end{tabular}
+\end{table}

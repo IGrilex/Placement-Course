@@ -1,0 +1,27 @@
+\begin{table}[htbp]
+\centering
+\caption{The ORB2 baseline's own absolute numbers on every (condition, sequence). Every relative figure elsewhere in this work is divided by the value on its own row, so a baseline out of line with its neighbours would rescale a whole sequence of comparisons.}
+\label{tab:baseline-health}
+\begin{tabular}{llrrrr}
+\toprule
+Seq. & Condition & Compl. & ATE (m) & fps & Peak RAM (GB) \\
+\midrule
+\texttt{test0} & i7-8700K · 12t · 14 GB & 3/3 & 1.273 & 5.94 & 8.64 \\
+\texttt{} & R9 9950X · 12t · 14 GB & 3/3 & 1.283 & 13.68 & 8.31 \\
+\texttt{} & R9 9950X · 12t · 28 GB & 5/5 & 1.292 & 13.92 & 9.11 \\
+\texttt{} & R9 9950X · 32t · 28 GB & 3/3 & 1.277 & 13.26 & 9.02 \\
+\texttt{test1} & i7-8700K · 12t · 14 GB & 3/3 & 5.908 & 4.83 & 13.02 \\
+\texttt{} & R9 9950X · 12t · 14 GB & 0/3 & -- & 13.42 & 10.05 \\
+\texttt{} & R9 9950X · 12t · 28 GB & 5/5 & 6.568 & 13.93 & 12.71 \\
+\texttt{} & R9 9950X · 32t · 28 GB & 3/3 & 7.696 & 13.37 & 12.61 \\
+\texttt{test2} & i7-8700K · 12t · 14 GB & 2/3 & 2.525 & 4.83 & 13.94 \\
+\texttt{} & R9 9950X · 12t · 14 GB & 2/3 & 2.769 & 13.66 & 12.72 \\
+\texttt{} & R9 9950X · 12t · 28 GB & 5/5 & 2.761 & 13.75 & 19.59 \\
+\texttt{} & R9 9950X · 32t · 28 GB & 3/3 & 2.595 & 13.12 & 19.88 \\
+\texttt{test3} & i7-8700K · 12t · 14 GB & 0/3 & -- & 6.99 & 8.32 \\
+\texttt{} & R9 9950X · 12t · 14 GB & 3/3 & 1.973 & 12.63 & 13.94 \\
+\texttt{} & R9 9950X · 12t · 28 GB & 3/5 & 3.227 & 13.14 & 16.76 \\
+\texttt{} & R9 9950X · 32t · 28 GB & 3/3 & 1.875 & 12.09 & 21.98 \\
+\bottomrule
+\end{tabular}
+\end{table}

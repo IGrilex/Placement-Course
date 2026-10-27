@@ -1,0 +1,17 @@
+\begin{table}[H]
+\centering
+\caption{The hardware ladder, on the 139 cells common to all four conditions. The runs column is not identical across rows, because the baseline carries extra repetitions at the reference condition. ``Succ.'' is the raw share of completed runs; ``alg.'' is the share over the algorithm-attributable subset (successes plus tracking losses, with memory and timeout deaths removed). The two converge as the budget grows and are identical once no run dies of memory.}
+\label{tab:hw-ladder}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrrrrrrrrr@{}}
+\toprule
+Condition & runs & succ.\ \% & alg.\ \% & lost \% & OOM & t/out & fps & peak GB & ATE m \\
+\midrule
+i7-8700K, 12t, 14 GB & 401 & 49.9 & 57.1 & 37.4 & 39 & 10 & 4.57 & 11.8 & 2.43 \\
+R9 9950X, 12t, 14 GB & 417 & 56.8 & 59.5 & 38.6 & 12 & 5 & 9.51 & 11.7 & 2.76 \\
+R9 9950X, 12t, 28 GB & 425 & 70.8 & 71.8 & 27.8 & 0 & 4 & 10.02 & 12.6 & 3.24 \\
+R9 9950X, 32t, 28 GB & 417 & 69.5 & 70.7 & 28.8 & 0 & 5 & 9.37 & 13.1 & 2.87 \\
+\bottomrule
+\end{tabular}
+\end{table}

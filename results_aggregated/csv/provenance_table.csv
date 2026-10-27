@@ -1,0 +1,9 @@
+condition,cond_label,rung,mode,runs_total,measured,recovered,orphaned,cells_total,cells_full,cells_under,cells_over,cells_probe,n_expected
+i7_12t_14,i7-8700K · 12t · 14 GB,1,SLAM,461,410,38,13,162,119,18,2,23,3
+i7_12t_14,i7-8700K · 12t · 14 GB,1,VO,92,76,12,4,80,80,0,0,0,1
+R9_12t_14,R9 9950X · 12t · 14 GB,2,SLAM,453,405,36,12,139,139,0,0,0,3
+R9_12t_14,R9 9950X · 12t · 14 GB,2,VO,64,48,12,4,52,52,0,0,0,1
+R9_12t_28,R9 9950X · 12t · 28 GB,3,SLAM,485,405,60,20,139,135,0,4,0,3
+R9_12t_28,R9 9950X · 12t · 28 GB,3,VO,64,48,12,4,52,52,0,0,0,1
+R9_32t_28,R9 9950X · 32t · 28 GB,4,SLAM,453,405,36,12,139,139,0,0,0,3
+R9_32t_28,R9 9950X · 32t · 28 GB,4,VO,64,48,12,4,52,52,0,0,0,1

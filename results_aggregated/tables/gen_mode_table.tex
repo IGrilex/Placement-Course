@@ -1,0 +1,17 @@
+\begin{table}[H]
+\centering
+\caption{Completion with and without loop closure, at both memory budgets. Visual odometry accumulates almost no history and barely notices the extra memory; full SLAM does almost nothing else.}
+\label{tab:gen-modes}
+\small
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Mode & Condition & runs & completed \% & lost & OOM \\
+\midrule
+VO & R9 9950X, 12t, 14 GB & 52 & 61.5 & 13 & 2 \\
+ & R9 9950X, 12t, 28 GB & 52 & 63.5 & 18 & 0 \\
+\midrule
+SLAM & R9 9950X, 12t, 14 GB & 417 & 56.8 & 161 & 12 \\
+ & R9 9950X, 12t, 28 GB & 425 & 70.8 & 118 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}

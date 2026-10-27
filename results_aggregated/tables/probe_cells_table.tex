@@ -1,0 +1,34 @@
+\begin{table}[htbp]
+\centering
+\caption{The 23 probe cells: single exploratory runs, used to decide whether a configuration was worth a full set of repetitions. They are the evidence behind the skip list and are excluded from every aggregate in this work.}
+\label{tab:probe-cells}
+\begin{tabular}{lllllrr}
+\toprule
+Condition & Mode & Seq. & Variant & Outcome & Compl.\ (\%) & fps \\
+\midrule
+i7_12t_14 & SLAM & test1 & \texttt{de\_orb2\_dav2} & timeout & 63.0 & 0.81 \\
+i7_12t_14 & SLAM & test2 & \texttt{de\_orb2\_dav2} & timeout & 32.7 & 0.80 \\
+i7_12t_14 & SLAM & test3 & \texttt{de\_orb2\_dav2} & timeout & 28.6 & 0.72 \\
+i7_12t_14 & SLAM & test1 & \texttt{de\_superpoint\_dav2} & lost & 28.5 & 0.81 \\
+i7_12t_14 & SLAM & test2 & \texttt{de\_superpoint\_dav2} & lost & 5.4 & 0.81 \\
+i7_12t_14 & SLAM & test3 & \texttt{de\_superpoint\_dav2} & lost & 30.3 & 0.80 \\
+i7_12t_14 & SLAM & test0 & \texttt{fe\_kaze} & timeout & 28.4 & 0.22 \\
+i7_12t_14 & SLAM & test1 & \texttt{fe\_kaze} & timeout & 16.9 & 0.22 \\
+i7_12t_14 & SLAM & test2 & \texttt{fe\_kaze} & timeout & 9.1 & 0.22 \\
+i7_12t_14 & SLAM & test3 & \texttt{fe\_kaze} & timeout & 8.8 & 0.22 \\
+i7_12t_14 & SLAM & test2 & \texttt{fe\_keynet} & timeout & 59.6 & 1.41 \\
+i7_12t_14 & SLAM & test3 & \texttt{fe\_keynet} & lost & 30.4 & 1.62 \\
+i7_12t_14 & SLAM & test1 & \texttt{lc\_alexnet} & timeout & 76.7 & 0.99 \\
+i7_12t_14 & SLAM & test2 & \texttt{lc\_alexnet} & timeout & 46.5 & 2.29 \\
+i7_12t_14 & SLAM & test3 & \texttt{lc\_alexnet} & timeout & 42.4 & 2.30 \\
+i7_12t_14 & SLAM & test2 & \texttt{lc\_cosplace} & oom & 88.4 & 3.71 \\
+i7_12t_14 & SLAM & test3 & \texttt{lc\_cosplace} & timeout & 74.9 & 3.94 \\
+i7_12t_14 & SLAM & test2 & \texttt{lc\_eigenplaces} & timeout & 85.3 & 3.70 \\
+i7_12t_14 & SLAM & test3 & \texttt{lc\_eigenplaces} & oom & 73.3 & 4.49 \\
+i7_12t_14 & SLAM & test2 & \texttt{lc\_ibow} & oom & 72.6 & 4.65 \\
+i7_12t_14 & SLAM & test3 & \texttt{lc\_ibow} & lost & 30.5 & 6.67 \\
+i7_12t_14 & SLAM & test2 & \texttt{lc\_netvlad} & oom & 89.0 & 3.91 \\
+i7_12t_14 & SLAM & test3 & \texttt{lc\_netvlad} & oom & 77.5 & 4.08 \\
+\bottomrule
+\end{tabular}
+\end{table}

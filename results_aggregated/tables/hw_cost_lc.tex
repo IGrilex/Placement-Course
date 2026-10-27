@@ -1,0 +1,27 @@
+\begin{table}[H]
+\centering
+\caption{Machine cost of each loop closer. Rows and columns as in Table~\ref{tab:hw-cost-fe}.}
+\label{tab:hw-cost-lc}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+\textbf{Method} & \textbf{fam.} & \textbf{GPU\,\% (rel)} & \textbf{CPU\,\% (rel)} & \textbf{fps (rel)} & \textbf{peak GB} & \textbf{CPU/frame} \\
+\midrule
+\textbf{ORB2 (baseline)} & Cls & \textbf{5.3\,(1.00$\times$)} & 36.9\,(1.00$\times$) & 13.8\,(1.00$\times$) & 19.6 & 2.67 \\
+DBoW2 & Cls & 6.6\,(1.25$\times$) & 36.3\,(0.98$\times$) & 13.7\,(1.00$\times$) & 21.1 & 2.64 \\
+OBIndex2 & Cls & 6.7\,(1.26$\times$) & 42.4\,(1.15$\times$) & 13.6\,(0.99$\times$) & 21.7 & 3.11 \\
+SAD & Cls & 6.7\,(1.27$\times$) & 35.3\,(0.96$\times$) & 14.4\,(1.05$\times$) & 19.1 & 2.45 \\
+VLAD & Cls & 6.7\,(1.28$\times$) & 36.0\,(0.97$\times$) & 14.8\,(1.08$\times$) & 19.3 & 2.43 \\
+iBoW & Cls & 6.8\,(1.30$\times$) & 41.4\,(1.10$\times$) & 14.5\,(1.04$\times$) & 13.5 & 2.86 \\
+AlexNet & CNN & 6.2\,(1.23$\times$) & 95.6\,(2.55$\times$) & 9.9\,(0.71$\times$) & \textbf{9.8} & 9.61 \\
+NetVLAD & CNN & 27.7\,(5.29$\times$) & 57.7\,(1.53$\times$) & 13.9\,(1.00$\times$) & 11.4 & 4.14 \\
+EigenPlaces & CNN & 46.7\,(8.86$\times$) & 58.2\,(1.55$\times$) & 14.1\,(1.01$\times$) & 10.7 & 4.13 \\
+CosPlace & CNN & 51.5\,(9.81$\times$) & 57.6\,(1.53$\times$) & 14.4\,(1.03$\times$) & 10.8 & 4.00 \\
+SuperVLAD & Trf & 6.5\,(1.24$\times$) & \textbf{32.1\,(0.87$\times$)} & 12.6\,(0.94$\times$) & 28.0 & 2.56 \\
+CricaVPR & Trf & 6.8\,(1.29$\times$) & 34.5\,(0.94$\times$) & 15.0\,(1.08$\times$) & 17.5 & 2.30 \\
+SALAD & Trf & 6.8\,(1.29$\times$) & 33.9\,(0.92$\times$) & 14.1\,(1.04$\times$) & 26.8 & 2.40 \\
+MegaLoc & Trf & 6.8\,(1.29$\times$) & 34.4\,(0.93$\times$) & \textbf{15.4\,(1.11$\times$)} & 18.9 & \textbf{2.24} \\
+\bottomrule
+\end{tabular}
+\end{table}

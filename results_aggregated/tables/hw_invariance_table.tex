@@ -1,0 +1,16 @@
+\begin{table}[H]
+\centering
+\caption{ATE on the 47 cells that completed at least 98\% of their sequence under \emph{every} condition. If accuracy moved with the hardware, no single-condition comparison would generalise. A Friedman test across the four conditions gives $p=0.24$.}
+\label{tab:hw-invariance}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Condition & median ATE (m) & mean ATE (m) \\
+\midrule
+i7-8700K, 12t, 14 GB & 1.287 & 5.966 \\
+R9 9950X, 12t, 14 GB & 1.309 & 5.881 \\
+R9 9950X, 12t, 28 GB & 1.292 & 5.892 \\
+R9 9950X, 32t, 28 GB & 1.302 & 9.664 \\
+\bottomrule
+\end{tabular}
+\end{table}

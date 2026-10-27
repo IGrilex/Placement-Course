@@ -1,0 +1,41 @@
+\begin{table}[H]
+\centering
+\caption{The 28 cells that went from zero successful runs at 14\,GB to at least one at 28\,GB, accounting for 70 recovered runs; 19 recovered every repetition. The \emph{was} column gives the modal outcome label across the three failed runs at 14\,GB. At run level, 75 of the 84 failures here were recorded as \textsc{lost}, 8 as \textsc{oom} and 1 as \textsc{timeout}: roughly nine in ten carried an algorithmic label for what the 28\,GB column shows to be memory pressure. Not one line of code differs between the two columns.}
+\label{tab:gen-rescued}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lllrrrr@{}}
+\toprule
+Variant & Seq. & was & 14\,GB & 28\,GB & peak GB @14 & peak GB @28 \\
+\midrule
+ORB2 (baseline) & test1 & \textsc{lost} & 0/3 & 5/5 & 10.1 & 12.7 \\
+GTSAM & test1 & \textsc{lost} & 0/3 & 3/3 & 8.6 & 12.3 \\
+AKAZE + MegaLoc & test1 & \textsc{lost} & 0/3 & 2/3 & 6.7 & 11.1 \\
+AKAZE + SALAD & test1 & \textsc{lost} & 0/3 & 3/3 & 5.8 & 12.6 \\
+AKAZE + SALAD & test3 & \textsc{lost} & 0/3 & 3/3 & 6.6 & 16.9 \\
+LightGlue + MegaLoc & test2 & \textsc{lost} & 0/3 & 1/3 & 9.1 & 13.7 \\
+LightGlue + NetVLAD & test2 & \textsc{lost} & 0/3 & 1/3 & 8.5 & 14.6 \\
+LightGlue + SALAD & test1 & \textsc{lost} & 0/3 & 1/3 & 7.8 & 11.4 \\
+ORB2 + DA V3 & test3 & \textsc{lost} & 0/3 & 3/3 & 13.9 & 26.9 \\
+AKAZE & test2 & \textsc{lost} & 0/3 & 3/3 & 12.6 & 19.9 \\
+AKAZE & test3 & \textsc{lost} & 0/3 & 3/3 & 13.9 & 18.1 \\
+ALIKED & test2 & \textsc{lost} & 0/3 & 1/3 & 6.9 & 12.0 \\
+BRISK & test1 & \textsc{lost} & 0/3 & 3/3 & 11.0 & 16.3 \\
+BRISK & test3 & \textsc{lost} & 0/3 & 3/3 & 12.0 & 25.3 \\
+D2-Net & test1 & \textsc{lost} & 0/3 & 3/3 & 13.8 & 22.3 \\
+DeDoDe & test0 & \textsc{lost} & 0/3 & 3/3 & 13.9 & 20.2 \\
+DeDoDe & test1 & \textsc{lost} & 0/3 & 3/3 & 12.9 & 25.5 \\
+Key.Net & test1 & \textsc{lost} & 0/3 & 1/3 & 8.2 & 11.7 \\
+RDD & test1 & \textsc{lost} & 0/3 & 2/3 & 13.8 & 18.9 \\
+RootSIFT & test1 & \textsc{lost} & 0/3 & 3/3 & 13.8 & 18.1 \\
+XFeat & test0 & \textsc{lost} & 0/3 & 3/3 & 13.8 & 15.0 \\
+XFeat & test1 & \textsc{lost} & 0/3 & 3/3 & 12.0 & 20.6 \\
+XFeat + LightGlue & test1 & \textsc{lost} & 0/3 & 3/3 & 13.9 & 23.5 \\
+XFeat×XFeat & test0 & \textsc{lost} & 0/3 & 3/3 & 13.9 & 19.6 \\
+XFeat×XFeat & test1 & \textsc{lost} & 0/3 & 1/3 & 12.8 & 21.5 \\
+DBoW2 & test1 & \textsc{lost} & 0/3 & 3/3 & 8.4 & 12.2 \\
+BRISK & test2 & \textsc{oom} & 0/3 & 3/3 & 13.9 & 24.6 \\
+LiftFeat & test1 & \textsc{oom} & 0/3 & 1/3 & 13.9 & 25.3 \\
+\bottomrule
+\end{tabular}
+\end{table}
